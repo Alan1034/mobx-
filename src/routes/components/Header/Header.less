@@ -1,0 +1,137 @@
+@import "~antd/lib/style/themes/default.less";
+
+@text-color: #fff;
+
+.header {
+  height: 50px;
+  padding: 0 12px 0 0;
+  background: #001529; // 原主题色
+  // background: linear-gradient(-90deg, #367CFF 7%, #2E7DFD 96%);
+  color: #fff;
+  box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+  position: relative;
+}
+
+:global {
+  .ant-layout {
+    overflow-x: hidden;
+  }
+}
+
+.logo {
+  height: 50px;
+  line-height: 58px;
+  vertical-align: top;
+  display: inline-block;
+  padding: 0 0 0 24px;
+  cursor: pointer;
+  font-size: 20px;
+  img {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.menu {
+  :global(.anticon) {
+    margin-right: 8px;
+  }
+  :global(.ant-dropdown-menu-item) {
+    width: 160px;
+  }
+}
+
+i.trigger {
+  height: 50px;
+  font-size: 20px;
+  // line-height: 50px;
+  cursor: pointer;
+  transition: all 0.3s, padding 0s;
+  padding: 15px 24px;
+  &:hover {
+    background: @primary-6;
+  }
+}
+
+.right {
+  float: right;
+  height: 100%;
+  .action {
+    cursor: pointer;
+    padding: 0 12px;
+    line-height: 50px;
+    display: inline-block;
+    transition: all 0.3s;
+    height: 100%;
+    > i {
+      font-size: 16px;
+      vertical-align: middle;
+      color: @text-color;
+    }
+    &:hover,
+    &:global(.ant-popover-open) {
+      background: @primary-6;
+    }
+    :global(.ant-badge) {
+      color: @text-color;
+    }
+  }
+  .search {
+    padding: 0;
+    margin: 0 12px;
+    &:hover {
+      background: transparent;
+    }
+  }
+  .account {
+    .avatar {
+      margin: 13px 8px 13px 0;
+      color: @primary-color;
+      background: rgba(255, 255, 255, 0.85);
+      vertical-align: middle;
+    }
+  }
+}
+
+@media only screen and (max-width: @screen-md) {
+  .header {
+    :global(.ant-divider-vertical) {
+      vertical-align: unset;
+    }
+    .name {
+      display: none;
+    }
+    i.trigger {
+      padding: 0 12px;
+    }
+    .logo {
+      padding-right: 12px;
+      position: relative;
+    }
+    .right {
+      position: absolute;
+      right: 12px;
+      top: 0;
+      background: #fff;
+      .account {
+        .avatar {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+.pageHeader {
+  :global(.antd-pro-page-header-pageHeader) {
+    background-color: transparent;
+    border-bottom: none;
+    :global(.antd-pro-page-header-breadcrumb) {
+      margin-bottom: -12px;
+    }
+  }
+  :global(.ant-breadcrumb) {
+    padding: 10px 16px;
+    margin-bottom: -25px;
+  }
+}
