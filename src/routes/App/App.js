@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from '../../logo.svg';
 import Map, { CanvasLayer,CanvasShape } from "@cbd/react-imap";
 import styles from './App.less';
 
@@ -38,7 +37,7 @@ class UseStrict extends Component {
     return (
       <div className={styles.App}>
         <Map
-          style={{ width: "100%", height: 1000 }}
+          style={{ width: 1000, height: 1000 }}
           initProps={{
             // zoom: 14,
             // maxZoom: 17,
